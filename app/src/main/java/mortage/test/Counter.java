@@ -12,6 +12,8 @@ public class Counter {
         return getRoundedNumber(monthlyPayment);
     }
 
+    
+    //The power and round number functions are only used by the Counter class and stays private, which is why they are not included in the test application
 
     private double power(double base, int exponent){
         double result = 1;

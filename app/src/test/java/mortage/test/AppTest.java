@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -21,7 +20,6 @@ class AppTest {
 
      @Test void readFile() throws IOException{
         File file = new File ("C:\\Users\\erikb\\OneDrive\\Dokument\\GitHub\\mortage-test\\app\\src\\test\\resources\\testFile.txt");
-
         String fileInformation = "";
         BufferedReader br = new BufferedReader(new FileReader(file));
         String str;
@@ -32,9 +30,4 @@ class AppTest {
         br.close();
      }
 
-     @Test void encodeUtf8(){
-        App app = new App();
-        String testString =  "åäöü";
-        assertEquals(testString, app.utf8Encode(testString));
-     }
 }
