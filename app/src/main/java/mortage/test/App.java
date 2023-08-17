@@ -27,7 +27,7 @@ public class App {
         frame.setVisible(true);
         frame.setLayout(null);
 
-        File file = new File ("C:\\Users\\erikb\\OneDrive\\Dokument\\GitHub\\mortage-test\\app\\src\\main\\resources\\prospects.txt");
+        File file = new File ("app/src/main/resources/prospects.txt");
         
         double mortage;
 
