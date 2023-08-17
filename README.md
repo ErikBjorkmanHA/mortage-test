@@ -6,9 +6,11 @@ https://mortage-test.s3.eu-north-1.amazonaws.com/mortage-test.rar?X-Amz-Algorith
 
 How to start the application:
 
-1. Download the root folder mortage-test
+1. Use the AWS link to download mortage-test.rar
 
-2. Open commandline or powershell and change the directory to mortage-test
+2. Extract the files
+
+2. Open a commandline and change the directory to the mortage-test root folder
 
 3. Use the command "./gradlew run" (excluding the quotation marks) to run the application
 
