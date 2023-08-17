@@ -8,12 +8,26 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
 public class App {
 
     public static void main(String[] args) throws IOException {
 
-        File file = new File ("C:\\Users\\erikb\\OneDrive\\Dokument\\GitHub\\mortage-test\\app\\src\\main\\resources\\prospects.txt");
         System.setProperty("file.encoding", "UTF-8");
+        
+        JFrame frame = new JFrame("Mortage");
+        JTextArea textArea = new JTextArea();
+        textArea.setEditable(false);
+
+        frame.add(textArea);
+        frame.setSize(800, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.setLayout(null);
+
+        File file = new File ("C:\\Users\\erikb\\OneDrive\\Dokument\\GitHub\\mortage-test\\app\\src\\main\\resources\\prospects.txt");
         
         double mortage;
 
@@ -32,8 +46,8 @@ public class App {
             
             mortage = counter.getMortage(Double.parseDouble(str.split(",")[1]),Double.parseDouble(str.split(",")[2]),Integer.parseInt(str.split(",")[3]));
 
-            System.out.println("Prospect "+customerNo+": "+str.split(",")[0]+" wants to borrow "+str.split(",")[1]+"€ for a period of "+str.split(",")[3]+" years and pay "+mortage+"€ each month");
-            
+            //System.out.println("Prospect "+customerNo+": "+str.split(",")[0]+" wants to borrow "+str.split(",")[1]+"€ for a period of "+str.split(",")[3]+" years and pay "+mortage+"€ each month");
+            textArea.append("Prospect "+customerNo+": "+str.split(",")[0]+" wants to borrow "+str.split(",")[1]+"€ for a period of "+str.split(",")[3]+" years and pay "+mortage+"€ each month\n");
             customerNo++;
             } catch (Exception e){
                 //ignore invalid rows
