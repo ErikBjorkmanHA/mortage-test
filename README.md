@@ -14,5 +14,5 @@ How to start the application:
 
 3. Use the command "./gradlew run" (excluding the quotation marks) to run the application
 
-NOTE: Java Development Kit is required to run this command. The version of JDK must also be compatible with 
-the version of gradle. The gradle version is set to 8.3 which works with the JDK 20.0.2.
+NOTE: Java Development Kit is required to run this application. The version of JDK must also be compatible with 
+the version of gradle. The gradle version is set to 8.3 which works with the newer versions of JDK such as JDK 20.0.2.
