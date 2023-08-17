@@ -27,7 +27,9 @@ public class App {
         frame.setVisible(true);
         frame.setLayout(null);
 
-        File file = new File ("app/src/main/resources/prospects.txt");
+
+        String userDirectory = System.getProperty("user.dir");
+        File file = new File (userDirectory+"\\src\\main\\resources\\prospects.txt");
         
         double mortage;
 
